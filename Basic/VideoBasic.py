@@ -18,7 +18,7 @@ height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # Define the codec and create VideoWriter object
 fourcc = int(cv2.VideoWriter_fourcc(*'DIVX'))
-out = cv2.VideoWriter('output.avi', fourcc, fps, (width, height), True) # True is 3-channel Output, False is 1-channel Output
+out = cv2.VideoWriter('output.avi', fourcc, fps, (width, height), True) # 3채널 칼라 영상으로 저장하기 위해 True, False인 경우 1채널 회색도 영상으로 저장
 
 cv2.namedWindow("Input", cv2.WINDOW_GUI_EXPANDED)
 cv2.namedWindow("Output", cv2.WINDOW_GUI_EXPANDED)
