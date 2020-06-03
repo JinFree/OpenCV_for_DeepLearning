@@ -2,11 +2,8 @@ import cv2
 import numpy as np
 from pytorch_functions import Inference
 path_to_video = 1
-'''
-def drawText(image, text, point=(10, 10), font=cv2.FONT_HERSHEY_PLAIN, fontScale=2.0, color=(255,255,255), thickness=3, lineType=cv2.LINE_AA):
-    result = imageCopy(image)
-    return cv2.putText(result, text, point, font, fontScale, color, thickness, lineType)
-'''
+
+
 def frameProcessing(frame, inference_class):
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     inference_result = inference_class.inference_image(frame_rgb)
