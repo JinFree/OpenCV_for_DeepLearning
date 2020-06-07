@@ -5,6 +5,7 @@ import random
 import Utils
 path_to_image = Utils.path_function("/../Data/image_01.png")
 
+# 소금과 후추 노이즈 함수
 def add_salt_and_pepper(input_image, noise_ratio = 0.001):
     image = np.copy(input_image)
     height, width = image.shape[0], image.shape[1]
@@ -23,6 +24,7 @@ def add_salt_and_pepper(input_image, noise_ratio = 0.001):
             image[y, x, 2] = random.randint(0, 2) * 255
     return image
 
+# CMOS 센서 특성 모사 함수
 def add_cmos_noise(input_image):
     image = np.copy(input_image)
     for x in range(image.shape[1]):
