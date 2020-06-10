@@ -9,6 +9,7 @@ def drawRect(image, point1, point2, color=(255, 0, 0), thickness=3, lineType=cv2
 imagePath = "../Data/image_01.png"
 image = cv2.imread(imagePath, cv2.IMREAD_COLOR)
 
+
 pt1 = (608, 358)
 pt2 = (756, 492)
 
@@ -26,3 +27,6 @@ cv2.imshow('rect_02', rect_02)
 cv2.imshow('rect_03', rect_03)
 cv2.waitKey()
 cv2.destroyAllWindows()
+
+
+
